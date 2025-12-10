@@ -10,6 +10,11 @@
 class ZastitaKodaSaPonavljanjem : public TelekomunikacioniUredjaj {
 public:
     ZastitaKodaSaPonavljanjem(int N);
+protected:
+    virtual int* koder () override;
+    virtual void kanal () override;
+    virtual int* dekoder() override;
+    // sutra odradi fje ovih override-ovanih metoda
 private:
 
 };
