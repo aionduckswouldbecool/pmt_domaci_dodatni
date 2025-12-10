@@ -1,0 +1,5 @@
+kako napraviti ovaj projekat: 
+	imam znaci klasu zastita Koda sa ponaljanjem;
+	imam konstruktor te klase
+	znaci on ce doci uzeti od nas u mainu broj_ponavljanja_n, vervovatnoca_greske_u_kanalu_p, duzina_sekvence_N iz konstruktora;
+	posle toga u funkciji koder ce da svaki bit u to 
