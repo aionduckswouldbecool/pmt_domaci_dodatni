@@ -5,7 +5,11 @@
 #include "TelekomunikacioniUredjaj.h"
 #include <random>
 
-
+void TelekomunikacioniUredjaj::printNiz(int * niz) {
+    for (int i = 0; niz[i] != duzina_sekvence_N; i++) {
+        std::cout << niz[i] << " ";
+    }
+}
 
 int TelekomunikacioniUredjaj::izvor_generator() {
     static std::random_device rd;

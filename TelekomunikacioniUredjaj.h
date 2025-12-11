@@ -5,7 +5,7 @@
 #ifndef ZASTITAKODASAPONAVLJANJEM_H
 #define ZASTITAKODASAPONAVLJANJEM_H
 #include <cstdlib>
-
+#include <iostream>
 class TelekomunikacioniUredjaj {
 public:
     TelekomunikacioniUredjaj(int N) : duzina_sekvence_N(N) {}
@@ -14,13 +14,16 @@ protected:
 
     int * izvor ();//  je metoda koja uzima i stvara dinamicki alociran niz od N clanova i ciji su clanovi brojei 0 i 1 izvor_generatora. Povratna vrednost je pokazivac na niz
 
-    virtual int* koder () = 0; // koder koji cemo redefinisati u podklasi
+    virtual int* koder (int * niz) = 0; // koder koji cemo redefinisati u podklasi
 
-    virtual void kanal () = 0; // kanal koji cemo redefinisati u podklasi
+    virtual void kanal (int * niz) = 0; // kanal koji cemo redefinisati u podklasi
 
-    virtual int* dekoder() = 0;// dekoder koji cemo redefinisati u podklasi i koji je zapravo ono sto prijemnik vidi
+    virtual int* dekoder(int * niz) = 0;// dekoder koji cemo redefinisati u podklasi i koji je zapravo ono sto prijemnik vidi
+
+    void printNiz(int * niz); // funkcija koja printuje niz
 
     int duzina_sekvence_N; // ovde se cuva duzina inicijalizovanog niza da bi bio pristupan podklasama
+
 };
 
 
