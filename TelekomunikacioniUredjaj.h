@@ -15,20 +15,14 @@ public:
 
     virtual int* koder (int * niz) = 0; // koder koji cemo redefinisati u podklasi
 
-    virtual void kanal (int * niz) = 0; // kanal koji cemo redefinisati u podklasi
+    virtual int* kanal (int * ulazni_niz, int * greska_niz) = 0; // vrace niz koji nastaje iz xor operacije ulaznog niza iz kodera i greska niza koji se stvara u drugoj klasi
 
     virtual int* dekoder(int * niz) = 0;// dekoder koji cemo redefinisati u podklasi i koji je zapravo ono sto prijemnik vidi
 
-    virtual void printNiz(int * niz); // funkcija koja printuje niz
-
-
-
+    virtual void printNiz(int * niz, int len); // funkcija koja printuje niz
 protected:
 
     int duzina_sekvence_N; // ovde se cuva duzina inicijalizovanog niza da bi bio pristupan podklasama
 
 };
-
-
-
 #endif // TELEKOMUNIKACIONI_UREDJAJ_H  cim klasa ima cisto jednu = 0 fju ona je apstraktna i od nje ne mozes da napravim objekt klase od nje

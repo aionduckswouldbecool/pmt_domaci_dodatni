@@ -13,11 +13,16 @@ public:
 
     // ako hocu podrazumevane vrednosti onda moram u ovaj konsturktor stavim cemu su jednake N,n,p
 
-    int* koder (int * niz) override; // on treba da uzme niz od
+    int* koder (int * niz) override; // on treba da uzme originalni niz i da svaki clan ponovi n puta
 
-    void kanal (int * niz) override;
+    int* kanal (int * ulazni_niz, int* greska_niz) override; // konacna definicija metode
 
-    virtual int* dekoder(int * niz) override;
+    int * greska_kanala_niz(); //vraca u odnosu na koji realizujemo gresku kanala
+
+    int greska_generator(); // vraca 0 ili 1 u ondnosu na p
+
+    virtual int* dekoder(int * niz) override; // on uzima niz iz kanala vraca u oblik duzine N preko majority rule-a
+
     // sutra odradi fje ovih override-ovanih metoda
 
 protected:

@@ -6,12 +6,11 @@
 #include <iostream>
 #include <random>
 
-void TelekomunikacioniUredjaj::printNiz(int * niz) {
-    for (int i = 0; i < duzina_sekvence_N; i++) {
+void TelekomunikacioniUredjaj::printNiz(int * niz, int len) {
+    for (int i = 0; i < len; i++) {
         std::cout << niz[i] << " ";
     }
 }
-
 int TelekomunikacioniUredjaj::izvor_generator() {
     static std::random_device rd;
     static std::mt19937 gen(rd());
