@@ -3,10 +3,11 @@
 //
 
 #include "TelekomunikacioniUredjaj.h"
+#include <iostream>
 #include <random>
 
 void TelekomunikacioniUredjaj::printNiz(int * niz) {
-    for (int i = 0; niz[i] != duzina_sekvence_N; i++) {
+    for (int i = 0; i < duzina_sekvence_N; i++) {
         std::cout << niz[i] << " ";
     }
 }
@@ -25,5 +26,6 @@ int* TelekomunikacioniUredjaj::izvor() {
     for (int i = 0; i < duzina_sekvence_N; i++) {
         niz[i] = izvor_generator();
     }
+    return niz;
 }
 
