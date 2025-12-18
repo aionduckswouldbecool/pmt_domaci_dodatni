@@ -59,3 +59,11 @@ int* ZastitaKodaSaPonavljanjem::dekoder(int * niz) {
     return dekodovan_niz;
 }
 
+int ZastitaKodaSaPonavljanjem::broj_pogresnih_karaktera(int *dobar_niz, int *greska_niz) {
+    int brojac_razlicitih = 0;
+    for (int i = 0; i < duzina_sekvence_N; i++) {
+        if (dobar_niz[i] != greska_niz[i]) brojac_razlicitih++;
+    }
+    return brojac_razlicitih;
+}
+

@@ -25,6 +25,8 @@ public:
 
     // sutra odradi fje ovih override-ovanih metoda
 
+    int broj_pogresnih_karaktera(int *dobar_niz, int *greska_niz);
+
 protected:
 
     int broj_ponavljanja_n; // broj ponavljanja kodera sa zastitom sa ponavljanjem
